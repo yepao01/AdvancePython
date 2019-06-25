@@ -18,6 +18,7 @@ def gen_func():
     #1. 可以产出值， 2. 可以接收值(调用方传递进来的值)
     html = yield "http://projectsedu.com"
     print(html)
+    yield  1
     return "bobby"
 
 #1. throw, close
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     #download url
     html = "bobby"
     print(gen.send(html)) #send方法可以传递值进入生成器内部，同时还可以重启生成器执行到下一个yield位置
-    print(gen.send(html))
+    # print(gen.send(html))
     #1.启动生成器方式有两种， next(), send
 
     # print(next(gen))

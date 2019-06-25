@@ -13,7 +13,7 @@ def get_url(url):
 
     #建立socket连接
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # client.setblocking(False)
+    # client.setblocking(False)  可以在client.connect((host, 80)) 立刻返回信息
     client.connect((host, 80)) #阻塞不会消耗cpu
 
     #不停的询问连接是否建立好， 需要while循环不停的去检查状态
